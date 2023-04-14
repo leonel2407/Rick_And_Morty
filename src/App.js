@@ -4,6 +4,7 @@ import Nav from './components/Nav/Nav';
 import Abaut from './components/abaut/About';
 import Detail from './components/Detail/Detail';
 import Form from './components/form/form';
+import Favorites from './components/Favorites/Favorites';
 import { useState, useEffect } from 'react';
 import { Routes, Route, useLocation, useNavigate} from 'react-router-dom';
 import axios from 'axios';
@@ -32,7 +33,7 @@ const API_KEY = 'aa4428c5a60d.112cdc34e04dbdd267cd';
 
    useEffect(() => {
       !access && navigate('/');
-   }, [access]);
+   }, [access, navigate]);
 
 
    const onSearch = (id) => {
@@ -59,6 +60,7 @@ const API_KEY = 'aa4428c5a60d.112cdc34e04dbdd267cd';
            <Route path='/home' element={<Cards characters={characters} onClose={onClose}/>} />
            <Route path='/About'element={<Abaut/>}/>
            <Route path='/detail/:id'element={<Detail/>}/>
+           <Route path='/favorites' element={<Favorites/>} />
          </Routes>
          
       </div>

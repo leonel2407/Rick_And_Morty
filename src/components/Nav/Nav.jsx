@@ -12,6 +12,9 @@ const Nav = ({ onSearch }) => {
             <button>
                  <Link to='/home' >Home</Link>
             </button>
+            <button>
+                <Link to='/favorites'>Favorites</Link>
+            </button>
         </nav>
     )
 }
